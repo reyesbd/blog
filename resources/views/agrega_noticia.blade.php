@@ -12,7 +12,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container mb-4">
 
       <div class="jumbotron jumbotron-fluid mt-2 mb-0">
         <div class="container">
@@ -23,10 +23,10 @@
 
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Agregar noticia</a>
+          <a class="nav-link active" href="#">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Agregar noticia</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -37,27 +37,57 @@
       </ul>
 
       <div class="row">
-
-        <form action="">
-			  <div class="form-group row">
-			    <label for="staticEmail" class="col-sm-4 col-form-label">Titulo</label>
-			    <div class="col-sm-10">
-			      <input type="text"  class="form-control" id="staticEmail" value="email@example.com">
-			    </div>
+         <div class="col">
+         	<h2>Agregar noticia</h2>
+	 		<form>
+			  <div class="form-group">
+			    <label for="titulo">Titulo</label>
+			    <input type="text" class="form-control" id="titulo" name="titulo">
 			  </div>
-			  <div class="form-group row">
-			    <label for="inputPassword" class="col-sm-4 col-form-label">Texto noticia</label>
-			    <div class="col-sm-10">
-			      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-			    </div>
-			  </div>    
-			  <div class="form-group row">
-			    <label for="inputPassword" class="col-sm-4 col-form-label">Autor:</label>
-			    <div class="col-sm-10">
-			      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-			    </div>
-			  </div> 			      	
-        </form>
+			  <div class="form-group">
+			    <label for="texto">Texto</label>
+			    <textarea class="form-control" id="texto" name="texto"></textarea>
+			  </div>
+			  <div class="form-group ">
+			    <label for="autor">Autor</label>
+			    <input type="text" class="form-control" id="autor" name="autor">
+			  </div>
+
+        <div class="form-row">
+
+				  <div class="form-group col-md-4">
+				    <label for="fecha ">Fecha</label>
+				    <input type="date" class="form-control " id="fecha" fecha="fecha">
+				  </div>
+
+				  <div class="form-group col-md-4">
+				    <label for="imagen">Imagen</label>
+				    <input type="file" class="form-control " id="imagen" name="imagen">
+				  </div>
+
+				  <div class="form-group col-md-4">
+				    <label for="categoria">Categoria</label>
+				    <select class="form-control " id="categoria" name="categoria">
+				    	<option value="0">Seleccione una opción</option>
+				    	<option value="1">Sistemas operativos</option>
+				    	<option value="2">Seguridad</option>
+				    	<option value="3">Hardware</option>
+				    </select>
+				  </div>
+
+			  </div>
+
+			  <div class="row text-right">
+			  	<div class="col">
+			        <button type="submit" class="btn btn-primary ">Guardar</button>			  		
+			  	</div>
+			  </div>
+
+
+
+			</form>        	
+         </div>
+
 
       </div>  <!-- fin del row -->
 
