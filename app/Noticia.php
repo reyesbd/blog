@@ -8,5 +8,5 @@ class Noticia extends Model
 {
     //
 //  protected $table = 'noticias';  
-
+   protected $fillable = ['titulo','cuerpo','autor','fecha','imagen','categoria'];
 }

@@ -16,8 +16,15 @@ Route::get('/','BlogController@index');
 
 Route::get('/agrega_noticia','BlogController@agregar_noticia');
 
+Route::post('/agrega','BlogController@agrega');
 
+Route::get('/lista_noticias','BlogController@lista');
 
+Route::get('/borrar/{id}','BlogController@index');
+
+Route::delete('/borrar/{id}','BlogController@destroy');
+
+Route::get('/editar/{id}','BlogController@editar');
 
 
 

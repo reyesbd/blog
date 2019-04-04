@@ -39,7 +39,8 @@
       <div class="row">
          <div class="col">
          	<h2>Agregar noticia</h2>
-	 		<form>
+	 		<form method="post" action="{{URL::to('/')}}/agregar" enctype="multipart/form-data">
+        {{ csrf_field() }}
 			  <div class="form-group">
 			    <label for="titulo">Titulo</label>
 			    <input type="text" class="form-control" id="titulo" name="titulo">
@@ -57,7 +58,7 @@
 
 				  <div class="form-group col-md-4">
 				    <label for="fecha ">Fecha</label>
-				    <input type="date" class="form-control " id="fecha" fecha="fecha">
+				    <input type="date" class="form-control " id="fecha" name="fecha">
 				  </div>
 
 				  <div class="form-group col-md-4">
