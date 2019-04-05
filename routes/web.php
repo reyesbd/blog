@@ -26,6 +26,8 @@ Route::delete('/borrar/{id}','BlogController@destroy');
 
 Route::get('/editar/{id}','BlogController@editar');
 
+Route::put('/update/{id2}','BlogController@update');
+
 
 
 

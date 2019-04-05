@@ -65,6 +65,27 @@ class BlogController extends Controller
       return view('editar_noticia')->with('noticia',$noticia);
 
     }
+
+
+    public function update(Request $request, $id2){
+       // echo $id2;die();
+       $data = request()->all();
+       $imagen = $request->file('imagen');
+       
+       if ($imagen===NULL){
+           $nombre='default.png';
+       }else{
+         $nombre = $imagen->getClientOriginalName();
+         $imagen->storeAs('',$nombre,'public');
+       }
+
+       $noticia = Noticia::findOrfail($id2);
+       $noticia->imagen = $nombre;
+
+       $noticia->fill($request->input())->save();
+
+       return redirect('/lista_noticias');
+    }
     
     // Para instalar los mensajes de error en español
     // Ejecutar en línea de comandos lo siguiente 

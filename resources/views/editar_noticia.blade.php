@@ -5,8 +5,10 @@
 <div class="row">
          <div class="col">
          	<h2>Agregar noticia</h2>
-	 		<form method="get" action="" enctype="multipart/form-data">
+	 		<form method="post" action="{{URL::to('/')}}/update/{{$noticia['id']}}" enctype="multipart/form-data">
         {{ csrf_field() }}
+        {{ method_field('PUT') }}
+
 			  <div class="form-group">
 			    <label for="titulo">Titulo</label>
 			    <input type="text" class="form-control" id="titulo" name="titulo" value="{{$noticia['titulo']}}">
@@ -35,7 +37,7 @@
           
 				  <div class="form-group col-md-4">
 				    <label for="categoria">Categoria</label>
-				    <select class="form-control " id="categoria" name="categoria" >
+				    <select class="form-control " id="categoria" name="categoria">
 				    	<option value="0">Seleccione una opción</option>
 				    	<option value="1">Sistemas operativos</option>
 				    	<option value="2">Seguridad</option>
